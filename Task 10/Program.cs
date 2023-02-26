@@ -1,7 +1,7 @@
 ﻿// В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
 int size = 123;
-int min = -100;
-int max = 200;
+int min = 1;
+int max = 500;
 
 int[] FillArray(int size, int min, int max)
 {
@@ -16,15 +16,15 @@ int[] FillArray(int size, int min, int max)
 void PrintCountArray(int[] arr)
 {
     int count = 1;
-    System.Console.WriteLine();
+    Console.WriteLine();
     for (int i = 0; i < arr.Length; i++)
     {
-        System.Console.Write(arr[i] + " ");
+        Console.Write(arr[i] + "   ");
         if (arr[i] >= 10 && arr[i] <= 99) count++;
     }
-    System.Console.WriteLine();
-    System.Console.WriteLine($"Количество чисел из диапазона [10, 99] равно {count}");
-    System.Console.WriteLine();
+    Console.WriteLine();
+    Console.WriteLine($"Количество чисел из диапазона [10, 99] равно {count}");
+    Console.WriteLine();
 }
 
 PrintCountArray(FillArray(size, min, max));
