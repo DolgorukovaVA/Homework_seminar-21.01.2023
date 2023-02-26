@@ -1,5 +1,7 @@
 ﻿// Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
-int size = 20;
+
+Console.WriteLine("Введите размер массива");
+int size = int.Parse(Console.ReadLine()??"");
 
 int[] FillArray(int size)
 {
@@ -17,15 +19,15 @@ void PrintResult(int[] array)
     int uneven = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        System.Console.Write(array[i] + " ");
+        Console.Write(array[i] + " ");
         if (array[i] % 2 == 0) even++;
         else uneven++;
     }
-    System.Console.WriteLine();
-    System.Console.WriteLine($"Количество четных чисел {even}, количество нечетных чисел {uneven}");
-    System.Console.WriteLine();
+    Console.WriteLine(" ");
+    Console.WriteLine($"Количество четных чисел {even}, количество нечетных чисел {uneven}");
+    Console.WriteLine(" ");
 }
-
+Console.WriteLine(" ");
 PrintResult(FillArray(size));
 
 
