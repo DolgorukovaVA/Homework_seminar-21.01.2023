@@ -29,17 +29,3 @@ void PrintResult(int[] array)
 }
 Console.WriteLine(" ");
 PrintResult(FillArray(size));
-
-
-
-// int[] CountEvenUneven(int[] array)                   // Это оказалось не нужным, но пусть пока будет
-// {
-//     int[] evenUneven = new int[2];
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         if (array[i] % 2 == 0) evenUneven[0]++;
-//         else evenUneven[1]++;
-//     }
-//     return evenUneven;
-// }
-
