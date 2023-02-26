@@ -1,12 +1,13 @@
-﻿// Найти сумму чисел одномерного массива стоящих на нечетной позиции
-int size = 5;
+﻿// Найти сумму чисел одномерного массива, стоящих на нечетной позиции
+Console.WriteLine("Введите размер массива");
+int size = int.Parse(Console.ReadLine()??"");
 
 int[] FillArray(int size)
 {
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(1, 100);
+        array[i] = new Random().Next(1, 50);
     }
     return array;
 }
@@ -14,15 +15,15 @@ int[] FillArray(int size)
 void PrintArray(int[] arr)
 {
     int sum = 0;
-    System.Console.WriteLine();
+    Console.WriteLine();
     for (int i = 0; i < size; i++)
     {
-        System.Console.Write(arr[i] + " ");
+        Console.Write(arr[i] + " ");
         if (i % 2 > 0) sum += arr[i];
     }
-    System.Console.WriteLine();
-    System.Console.WriteLine($"Сумма чисел, стоящих на нечетной позиции, соcтаваляет {sum} ");
-    System.Console.WriteLine();
+    Console.WriteLine(" ");
+    Console.WriteLine($"Сумма чисел, стоящих на нечетной позиции, равна {sum} ");
+    Console.WriteLine();
 }
 
 PrintArray(FillArray(size));
