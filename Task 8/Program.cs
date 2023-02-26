@@ -1,6 +1,6 @@
 ﻿// Определить, присутствует ли в заданном массиве, некоторое число
-
-int Number = 30;
+Console.WriteLine("Введите число");
+int Number = int.Parse(Console.ReadLine()??"");
 int size = 10;
 int min = 1;
 int max = 50;
@@ -38,5 +38,7 @@ void PrinArray(int[] arr)
 int[] array = CreateArray(size, min, max);
 PrinArray(array);
 if (FindNumber(array, Number)) Result = "присутствует";
+Console.WriteLine("  ");
 Console.WriteLine($"Число {Number} {Result} в массиве");
 Console.WriteLine();
+
