@@ -1,8 +1,8 @@
-﻿// В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+﻿// В указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
 
 int size = new Random().Next(1, 11);
 
-System.Console.WriteLine($"Количетсов элементов массива: {size}");
+Console.WriteLine($"Размер массива: {size}");
 
 double[] FillSourceArray(int size)
 {
@@ -18,14 +18,14 @@ void PrintDiffMinMax(double[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        System.Console.WriteLine(arr[i]);
+        Console.WriteLine(arr[i]);
     }
     double difference = arr.Max() - arr.Min();
-    System.Console.WriteLine($"Минимальное значение массива {arr.Min()}, максимальное значение массива {arr.Max()}");
-    System.Console.WriteLine($"Разница между минимальным и максимальным значениями массива составляет {difference}");
-    System.Console.WriteLine();
+    Console.WriteLine($"Минимальное значение массива {arr.Min()}, максимальное значение массива {arr.Max()}");
+    Console.WriteLine($"Разница между минимальным и максимальным значениями массива составляет {difference}");
+    Console.WriteLine();
 }
 
 PrintDiffMinMax(FillSourceArray(size));
-System.Console.WriteLine();
+Console.WriteLine();
 
